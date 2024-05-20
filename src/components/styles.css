@@ -22,7 +22,7 @@
 }
 
 .hero-image {
-    background-image: url('images/base1.jpg'); /* Chemin d'accès à votre image */
+    background-image: url('images/base1'); /* Chemin d'accès à votre image */
     background-color: #cccccc; /* Utilisé si l'image n'est pas chargée */
     height: 600px; /* Ajustez la hauteur selon vos besoins */
     background-position: center;
