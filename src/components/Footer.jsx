@@ -1,5 +1,4 @@
 import React from 'react';
-import './Footer.css';
 
 const Footer = () => {
   return (
@@ -8,12 +7,18 @@ const Footer = () => {
         <div className="row">
           <div className="col-md-3">
             <p><strong>John Doe</strong></p>
-            <p>40 Rue Laure Diebold<br />Lyon, France 69009</p>
-            <p>Téléphone :  06 77 10 28 20</p>
+            <p>40 Rue Laure Diebold<br />69009 Lyon, France</p>
+            <p>Téléphone : 06 77 10 28 20</p>
             <div className="social-icons">
-              <a href="https://www.linkedin.com/in/johndoe" target="_blank" rel="noopener noreferrer"><img src="icones/linkedin_social_5085.png" alt="LinkedIn" /></a>
-              <a href="https://github.com/johndoe" target="_blank" rel="noopener noreferrer"><img src="icones/Social-26-Github-Outline_icon-icons.com_66350.png" alt="GitHub" /></a>
-              <a href="https://twitter.com/johndoe" target="_blank" rel="noopener noreferrer"><img src="icones/social-twitter-outline_icon-icons.com_49997.png" alt="Twitter" /></a>
+              <a href="https://www.linkedin.com/in/johndoe" target="_blank" rel="noopener noreferrer">
+                <img src="/images/linkedin_social_5085.png" alt="LinkedIn" className="social-icon" />
+              </a>
+              <a href="https://github.com/johndoe" target="_blank" rel="noopener noreferrer">
+                <img src="/images/Social-26-Github-Outline_icon-icons.com_66350.png" alt="GitHub" className="social-icon" />
+              </a>
+              <a href="https://twitter.com/johndoe" target="_blank" rel="noopener noreferrer">
+                <img src="/images/social-twitter-outline_icon-icons.com_49997.png" alt="Twitter" className="social-icon" />
+              </a>
             </div>
           </div>
           <div className="col-md-3">
@@ -44,7 +49,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="sub-footer">
+      <div className="sub-footer bg-dark text-white text-center py-2">
         © Designed by John Doe
       </div>
     </footer>
@@ -52,3 +57,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

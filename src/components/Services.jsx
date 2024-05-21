@@ -1,38 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Services = () => {
   return (
     <div>
-      {/* Navigation */}
-      <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#1e1e1e' }}>
-        <div className="container">
-          <Link className="navbar-brand" to="/">John Doe</Link>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item active">
-                <Link className="nav-link" to="/">Accueil <span className="sr-only">(current)</span></Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/services">Services</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/portfolio">Réalisations</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/blog">Blog</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/contact">Contact</Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Image for Services Page */}
       <div className="services-hero">
         <img src="images/blog3.jpg" alt="Services Hero Image" className="img-fluid" />
@@ -80,57 +50,6 @@ const Services = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Footer */}
-      <footer className="footer bg-light">
-        <div className="container">
-          <div className="row">
-            {/* Informations de contact */}
-            <div className="col-md-3">
-              <p><strong>John Doe</strong></p>
-              <p>40 Rue Laure Diebold<br />Lyon, France 69009</p>
-              <p>Téléphone :  06 77 10 28 20</p>
-              <div className="social-icons">
-                <a href="https://www.linkedin.com/in/johndoe" target="_blank" rel="noopener noreferrer"><img src="icones/linkedin_social_5085.png" alt="LinkedIn" /></a>
-                <a href="https://github.com/johndoe" target="_blank" rel="noopener noreferrer"><img src="icones/Social-26-Github-Outline_icon-icons.com_66350.png" alt="GitHub" /></a>
-                <a href="https://twitter.com/johndoe" target="_blank" rel="noopener noreferrer"><img src="icones/social-twitter-outline_icon-icons.com_49997.png" alt="Twitter" /></a>
-              </div>
-            </div>
-            {/* Liens utiles */}
-            <div className="col-md-3">
-              <p><strong>Liens utiles</strong></p>
-              <ul className="list-unstyled">
-                <li><a href="/">Accueil</a></li>
-                <li><a href="/portfolio">À propos</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/contact">Me contacter</a></li>
-                <li><a href="/mentions-legales">Mentions légales</a></li>
-              </ul>
-            </div>
-            {/* Dernières réalisations */}
-            <div className="col-md-3">
-              <p><strong>Mes dernières réalisations</strong></p>
-              <ul className="list-unstyled">
-                <li>Fresh food</li>
-                <li>Restaurant Akira</li>
-                <li>Espace bien-être</li>
-              </ul>
-            </div>
-            {/* Derniers articles */}
-            <div className="col-md-3">
-              <p><strong>Mes derniers articles</strong></p>
-              <ul className="list-unstyled">
-                <li>Coder son site en HTML/CSS</li>
-                <li>Vendre ses produits sur le web</li>
-                <li>Se positionner sur Google</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <div className="sub-footer">
-        © Designed by John Doe
       </div>
     </div>
   );

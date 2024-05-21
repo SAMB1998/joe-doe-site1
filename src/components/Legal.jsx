@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Legal = () => {
+  const [activeKey, setActiveKey] = useState('collapseOne');
+
+  const handleToggle = (key) => {
+    setActiveKey(activeKey === key ? '' : key);
+  };
+
   return (
     <div className="container my-5">
       <h2 className="text-center">MENTIONS LÉGALES</h2>
@@ -9,12 +15,17 @@ const Legal = () => {
         <div className="card">
           <div className="card-header" id="headingOne">
             <h5 className="mb-0">
-              <button className="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <button 
+                className="btn btn-link" 
+                onClick={() => handleToggle('collapseOne')}
+                aria-expanded={activeKey === 'collapseOne'}
+                aria-controls="collapseOne"
+              >
                 Éditeur du site
               </button>
             </h5>
           </div>
-          <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#legalAccordion">
+          <div id="collapseOne" className={`collapse ${activeKey === 'collapseOne' ? 'show' : ''}`} aria-labelledby="headingOne" data-parent="#legalAccordion">
             <div className="card-body">
               <strong>John Doe</strong><br />
               40 Rue Laure Diebold<br />
@@ -27,12 +38,17 @@ const Legal = () => {
         <div className="card">
           <div className="card-header" id="headingTwo">
             <h5 className="mb-0">
-              <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <button 
+                className="btn btn-link collapsed" 
+                onClick={() => handleToggle('collapseTwo')}
+                aria-expanded={activeKey === 'collapseTwo'}
+                aria-controls="collapseTwo"
+              >
                 Hébergeur
               </button>
             </h5>
           </div>
-          <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#legalAccordion">
+          <div id="collapseTwo" className={`collapse ${activeKey === 'collapseTwo' ? 'show' : ''}`} aria-labelledby="headingTwo" data-parent="#legalAccordion">
             <div className="card-body">
               <strong>Always Data</strong><br />
               91 rue du Faubourg Saint Honoré<br />
@@ -44,14 +60,19 @@ const Legal = () => {
         <div className="card">
           <div className="card-header" id="headingThree">
             <h5 className="mb-0">
-              <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <button 
+                className="btn btn-link collapsed" 
+                onClick={() => handleToggle('collapseThree')}
+                aria-expanded={activeKey === 'collapseThree'}
+                aria-controls="collapseThree"
+              >
                 Crédits
               </button>
             </h5>
           </div>
-          <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#legalAccordion">
+          <div id="collapseThree" className={`collapse ${activeKey === 'collapseThree' ? 'show' : ''}`} aria-labelledby="headingThree" data-parent="#legalAccordion">
             <div className="card-body">
-              Site développé par Aissam Bellouch, étudiant du CEF.<br />
+              Site développé par John Doe, étudiant du CEF.<br />
               Les images libres de droit sont issues du site <a href="https://pixabay.com" target="_blank" rel="noopener noreferrer">Pixabay</a>.
             </div>
           </div>

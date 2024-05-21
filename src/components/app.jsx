@@ -1,14 +1,15 @@
+// src/App.jsx (ou le fichier de routage principal)
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import Services from './components/Services';
-import Portfolio from './components/Portfolio';
-import Blog from './components/Blog';
-import Contact from './components/Contact';
-import Legal from './components/Legal';
-import './styles.css';  // Importez votre fichier CSS ici
+import Home from './Home';
+import Services from './Services';
+import Portfolio from './Portfolio';
+import Blog from './Blog';
+import Contact from './Contact';
+import Legal from './Legal';
+import GithubProfile from './GithubProfile';
+import Header from './Header';
+import Footer from './Footer';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/blog" component={Blog} />
         <Route path="/contact" component={Contact} />
         <Route path="/mentions-legales" component={Legal} />
+        <Route path="/profil-github" component={GithubProfile} />
       </Switch>
       <Footer />
     </Router>
@@ -28,3 +30,4 @@ const App = () => {
 };
 
 export default App;
+

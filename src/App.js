@@ -1,30 +1,31 @@
-// src/App.js
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import Services from './components/Services';
+import Portfolio from './components/Portfolio';
+import Blog from './components/Blog';
+import Contact from './components/Contact';
+import Legal from './components/Legal';
+import './styles.css';  // Importez votre fichier CSS ici
 
-import React, { useState } from 'react';
-import './App.css'; // Assurez-vous d'avoir ce fichier
-import Profile from './Profile'; // Importez le composant Profile
-
-function App() {
-  const [username, setUsername] = useState('github-john-doe');
-
-  const handleInputChange = (event) => {
-    setUsername(event.target.value);
-  };
-
+const App = () => {
   return (
-    <div className="App">
-      <header>
-        <h1>GitHub Profile Viewer</h1>
-        <input
-          type="text"
-          value={username}
-          onChange={handleInputChange}
-          placeholder="Enter GitHub username"
-        />
-      </header>
-      <Profile username={username} />
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/mentions-legales" element={<Legal />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
-}
+};
 
 export default App;
